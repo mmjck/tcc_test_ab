@@ -16,11 +16,11 @@
 - Realizar experimento com  os componenente somples
 
 
-Arquitetura Pensada
+## Arquitetura Pensada
 
 ![image](https://user-images.githubusercontent.com/55866244/234457564-b6eaa531-fea1-4a24-b49b-ba99e84ca047.png)
 
 
-Problemas:
+## Problemas:
 - Desenvolver um parseado baseado em SSR
   - Pode ser um desenvolvido a partir dessa [lib](https://pub.dev/packages/ssr)
