@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tcc_test_ab/assets/fonts/fonts.dart';
+import 'package:tcc_test_ab/components/typography/typography.dart';
 import 'package:tcc_test_ab/firebase_options.dart';
 import 'package:tcc_test_ab/remote_config/keys.dart';
 import 'package:tcc_test_ab/remote_config/remote_config.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Demo'),
     );
   }
 }
@@ -69,22 +70,18 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildText() {
     return Column(
       children: [
-        Text(
-          RemoteConfig.getString(RemoteConfigKeys.simpleText),
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-            fontFamily: Fonts.openSeans,
-          ),
+        TypographyVariant(
+          fontSize: 20,
+          fontsFamily: Fonts.poppins,
+          text: RemoteConfig.getString(RemoteConfigKeys.simpleText),
+          weight: FontWeight.bold,
         ),
-        Text(
-          RemoteConfig.getString(RemoteConfigKeys.simpleText),
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 20,
-            fontFamily: Fonts.poppins,
-          ),
-        ),
+        TypographyVariant(
+          fontSize: 20,
+          fontsFamily: Fonts.poppins,
+          text: RemoteConfig.getString(RemoteConfigKeys.simpleText),
+          weight: FontWeight.bold,
+        )
       ],
     );
   }

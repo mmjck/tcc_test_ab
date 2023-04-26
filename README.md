@@ -22,4 +22,4 @@
 
 ## Problemas:
 - Desenvolver um parseado baseado em SSR
-  - Pode ser um desenvolvido a partir dessa [lib](https://pub.dev/packages/ssr)
+  - Pode ser um desenvolvido a partir dessa [lib](https://pub.dev/packages/json_dynamic_widget)
