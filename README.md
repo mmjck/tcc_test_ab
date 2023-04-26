@@ -1,16 +1,16 @@
-# tcc_test_ab
+## Passo 1 para fazer
+- Estruturar json para renderizar componenente de acordo o tipo espeficicado
+- Estruturar um componente simples para sofrer alteração
 
-A new Flutter project.
+##  Passo 2 para fazer
 
-## Getting Started
+- Realizar experimento com  os componenente somples
 
-This project is a starting point for a Flutter application.
+##  Passo 3 para fazer
 
-A few resources to get you started if this is your first Flutter project:
+- Estruturar um componente com outros componentes para serem renderizados de acordo com o json RemoteConfig
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##  Passo 4 para fazer
+
+- Realizar experimento com  os componenente somples
