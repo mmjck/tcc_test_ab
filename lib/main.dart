@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:tcc_test_ab/assets/fonts/fonts.dart';
 import 'package:tcc_test_ab/firebase_options.dart';
 import 'package:tcc_test_ab/remote_config/keys.dart';
 import 'package:tcc_test_ab/remote_config/remote_config.dart';
@@ -66,9 +67,25 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildText() {
-    return Text(
-      RemoteConfig.getString(RemoteConfigKeys.simpleText),
-      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+    return Column(
+      children: [
+        Text(
+          RemoteConfig.getString(RemoteConfigKeys.simpleText),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            fontFamily: Fonts.openSeans,
+          ),
+        ),
+        Text(
+          RemoteConfig.getString(RemoteConfigKeys.simpleText),
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 20,
+            fontFamily: Fonts.poppins,
+          ),
+        ),
+      ],
     );
   }
 
