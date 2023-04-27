@@ -8,6 +8,7 @@ class TypographyVariant extends StatelessWidget {
   final String fontsFamily;
   final double fontSize;
   final FontWeight weight;
+  final Color color;
 
   const TypographyVariant({
     super.key,
@@ -15,6 +16,7 @@ class TypographyVariant extends StatelessWidget {
     required this.weight,
     required this.fontsFamily,
     required this.fontSize,
+    required this.color,
   });
 
   @override
@@ -23,6 +25,7 @@ class TypographyVariant extends StatelessWidget {
       text,
       style: TextStyle(
         fontWeight: weight,
+        color: color,
         fontSize: fontSize,
         fontFamily: fontsFamily,
       ),

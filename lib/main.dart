@@ -2,13 +2,22 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tcc_test_ab/assets/fonts/fonts.dart';
 import 'package:tcc_test_ab/components/typography/typography.dart';
+import 'package:tcc_test_ab/dyamic_view.dart';
 import 'package:tcc_test_ab/firebase_options.dart';
+import 'package:tcc_test_ab/parser_service.dart';
 import 'package:tcc_test_ab/remote_config/keys.dart';
 import 'package:tcc_test_ab/remote_config/remote_config.dart';
+import 'package:tcc_test_ab/parses/typography/typography_builder.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  final parserService = ParserService();
+
+  parserService.bindComponents(
+    TypographyBuilder.type,
+    TypographyBuilder.fromDynamic,
+  );
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -70,14 +79,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildText() {
     return Column(
       children: [
+        DynamicView(),
         TypographyVariant(
           fontSize: 20,
           fontsFamily: Fonts.poppins,
           text: RemoteConfig.getString(RemoteConfigKeys.simpleText),
           weight: FontWeight.bold,
+          color: Colors.red,
         ),
         TypographyVariant(
           fontSize: 20,
+          color: Colors.red,
           fontsFamily: Fonts.poppins,
           text: RemoteConfig.getString(RemoteConfigKeys.simpleText),
           weight: FontWeight.bold,
